@@ -1,0 +1,471 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EC1B6ADF-0DB3-4A7A-9C7D-53518D38930D}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebMusic</RootNamespace>
+    <AssemblyName>WebMusic</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.4\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.4\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.4\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AuthController.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PageDetailsController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\assets\bootstrap\bootstrap-theme.css" />
+    <Content Include="Content\assets\bootstrap\bootstrap-theme.min.css" />
+    <Content Include="Content\assets\bootstrap\bootstrap.css" />
+    <Content Include="Content\assets\bootstrap\bootstrap.min.css" />
+    <Content Include="Content\scripts\contact.js" />
+    <Content Include="Content\scripts\tabsBXH.js" />
+    <Content Include="Content\scss\module\_bars.scss" />
+    <Content Include="Content\scss\module\_bodyAside.scss" />
+    <None Include="Content\scss\module\_breadcrumb.scss" />
+    <Content Include="Content\assets\images\Album\1%25.jpg" />
+    <Content Include="Content\assets\images\Album\aichuyencubankhong.jpg" />
+    <Content Include="Content\assets\images\Album\aloneptii.jpg" />
+    <Content Include="Content\assets\images\Album\anhoiolai.jpg" />
+    <Content Include="Content\assets\images\Album\badboy.jpg" />
+    <Content Include="Content\assets\images\Album\banhmikhong.jpg" />
+    <Content Include="Content\assets\images\Album\beginning.jpg" />
+    <Content Include="Content\assets\images\Album\bluesapphire.jpg" />
+    <Content Include="Content\assets\images\Album\bongbongbangbang.jpg" />
+    <Content Include="Content\assets\images\Album\calma.jpg" />
+    <Content Include="Content\assets\images\Album\canmotlydo.jpg" />
+    <Content Include="Content\assets\images\Album\chotaganhon.jpg" />
+    <Content Include="Content\assets\images\Album\cloverwish.jpg" />
+    <Content Include="Content\assets\images\Album\cochangtraivietlencay.jpg" />
+    <Content Include="Content\assets\images\Album\crashbandicootmaintheme.jpg" />
+    <Content Include="Content\assets\images\Album\dalladalla.jpg" />
+    <Content Include="Content\assets\images\Album\didetrove.jpg" />
+    <Content Include="Content\assets\images\Album\doahoahong.jpg" />
+    <Content Include="Content\assets\images\Album\donletmedown.jpg" />
+    <Content Include="Content\assets\images\Album\dusktilldawn.jpg" />
+    <Content Include="Content\assets\images\Album\emnoianhroi.jpg" />
+    <Content Include="Content\assets\images\Album\energetic.jpg" />
+    <Content Include="Content\assets\images\Album\esraxled.jpg" />
+    <Content Include="Content\assets\images\Album\fancy.jpg" />
+    <Content Include="Content\assets\images\Album\happier.jpg" />
+    <Content Include="Content\assets\images\Album\havana.jpg" />
+    <Content Include="Content\assets\images\Album\icy.jpg" />
+    <Content Include="Content\assets\images\Album\ifyouloveme.jpg" />
+    <Content Include="Content\assets\images\Album\inyourarea.jpg" />
+    <Content Include="Content\assets\images\Album\itaintme.jpg" />
+    <Content Include="Content\assets\images\Album\Joytime.jpg" />
+    <Content Include="Content\assets\images\Album\justright.jpg" />
+    <Content Include="Content\assets\images\Album\ku%27sfirstflight.jpg" />
+    <Content Include="Content\assets\images\Album\lamgiphaihot.jpg" />
+    <Content Include="Content\assets\images\Album\lethergo.jpg" />
+    <Content Include="Content\assets\images\Album\letitgo.jpg" />
+    <Content Include="Content\assets\images\Album\lion.jpg" />
+    <Content Include="Content\assets\images\Album\lover.png" />
+    <Content Include="Content\assets\images\Album\mapofthesoul.jpg" />
+    <Content Include="Content\assets\images\Album\moianhvaotimem.jpg" />
+    <Content Include="Content\assets\images\Album\motnammoibinhan.jpg" />
+    <Content Include="Content\assets\images\Album\movemountains.jpg" />
+    <Content Include="Content\assets\images\Album\nightcall.jpg" />
+    <Content Include="Content\assets\images\Album\nonono.jpg" />
+    <Content Include="Content\assets\images\Album\nuhondanhroi.jpg" />
+    <Content Include="Content\assets\images\Album\on.jpg" />
+    <Content Include="Content\assets\images\Album\peekaboo.jpg" />
+    <Content Include="Content\assets\images\Album\phiasaumotcogai.jpg" />
+    <Content Include="Content\assets\images\Album\play.jpg" />
+    <Content Include="Content\assets\images\Album\pokemon.jpg" />
+    <Content Include="Content\assets\images\Album\postmalonehollywood.jpg" />
+    <Content Include="Content\assets\images\Album\psycho.jpg" />
+    <Content Include="Content\assets\images\Album\rare.png" />
+    <Content Include="Content\assets\images\Album\rucrothangnam.jpg" />
+    <Content Include="Content\assets\images\Album\sedansogu.jpg" />
+    <Content Include="Content\assets\images\Album\seeb.jpg" />
+    <Content Include="Content\assets\images\Album\sexualhealing.jpg" />
+    <Content Include="Content\assets\images\Album\shots.jpg" />
+    <Content Include="Content\assets\images\Album\silence.jpg" />
+    <Content Include="Content\assets\images\Album\simplelove.jpg" />
+    <Content Include="Content\assets\images\Album\somethingjustlikethis.jpg" />
+    <Content Include="Content\assets\images\Album\squaretwo.jpg" />
+    <Content Include="Content\assets\images\Album\staywithme.jpg" />
+    <Content Include="Content\assets\images\Album\sunlight.jpg" />
+    <Content Include="Content\assets\images\Album\supershiro.jpg" />
+    <Content Include="Content\assets\images\Album\talktome.jpg" />
+    <Content Include="Content\assets\images\Album\tetvesomnhe.jpg" />
+    <Content Include="Content\assets\images\Album\thankyounext.png" />
+    <Content Include="Content\assets\images\Album\thaylayeuthuong.jpg" />
+    <Content Include="Content\assets\images\Album\tuhomnay.png" />
+    <Content Include="Content\assets\images\Album\uchiagehanabi.jpg" />
+    <Content Include="Content\assets\images\Album\valsedifantastica.jpg" />
+    <Content Include="Content\assets\images\Album\vietnamtoi.jpg" />
+    <Content Include="Content\assets\images\Album\wannabe.jpg" />
+    <Content Include="Content\assets\images\Album\windflower.jpg" />
+    <Content Include="Content\assets\images\Album\wreckingball.jpg" />
+    <Content Include="Content\assets\images\app-android.png" />
+    <Content Include="Content\assets\images\app-ios.png" />
+    <Content Include="Content\assets\images\artist\2ne1.jpg" />
+    <Content Include="Content\assets\images\artist\alanwalk.jpg" />
+    <Content Include="Content\assets\images\artist\amee.jpg" />
+    <Content Include="Content\assets\images\artist\arianagrande.jpg" />
+    <Content Include="Content\assets\images\artist\bichphuong.jpg" />
+    <Content Include="Content\assets\images\artist\bigbang.jpg" />
+    <Content Include="Content\assets\images\artist\binz.jpg" />
+    <Content Include="Content\assets\images\artist\blackpink.jpg" />
+    <Content Include="Content\assets\images\artist\bts.jpg" />
+    <Content Include="Content\assets\images\artist\calvinharris.jpg" />
+    <Content Include="Content\assets\images\artist\camilacabello.jpg" />
+    <Content Include="Content\assets\images\artist\cardib.jpg" />
+    <Content Include="Content\assets\images\artist\charlieputh.jpg" />
+    <Content Include="Content\assets\images\artist\chipu.jpg" />
+    <Content Include="Content\assets\images\artist\coldplay.jpg" />
+    <Content Include="Content\assets\images\artist\davichi.jpg" />
+    <Content Include="Content\assets\images\artist\demilovato.jpg" />
+    <Content Include="Content\assets\images\artist\den.jpg" />
+    <Content Include="Content\assets\images\artist\dualipa.png" />
+    <Content Include="Content\assets\images\artist\ducphuc.jpg" />
+    <Content Include="Content\assets\images\artist\erik.jpg" />
+    <Content Include="Content\assets\images\artist\exid.jpg" />
+    <Content Include="Content\assets\images\artist\exo.jpg" />
+    <Content Include="Content\assets\images\artist\gidle.jpg" />
+    <Content Include="Content\assets\images\artist\got7.jpg" />
+    <Content Include="Content\assets\images\artist\hansara.jpg" />
+    <Content Include="Content\assets\images\artist\hienho.jpg" />
+    <Content Include="Content\assets\images\artist\hoaminzy.jpg" />
+    <Content Include="Content\assets\images\artist\huonggiang.jpg" />
+    <Content Include="Content\assets\images\artist\huongtram.jpg" />
+    <Content Include="Content\assets\images\artist\imaginedragons.jpg" />
+    <Content Include="Content\assets\images\artist\itzy.jpg" />
+    <Content Include="Content\assets\images\artist\iu.jpg" />
+    <Content Include="Content\assets\images\artist\justatee.jpg" />
+    <Content Include="Content\assets\images\artist\justinbieber.jpg" />
+    <Content Include="Content\assets\images\artist\katyperry.jpg" />
+    <Content Include="Content\assets\images\artist\khoimy.jpg" />
+    <Content Include="Content\assets\images\artist\littlemix.jpg" />
+    <Content Include="Content\assets\images\artist\mamamoo.jpg" />
+    <Content Include="Content\assets\images\artist\marshmello.jpg" />
+    <Content Include="Content\assets\images\artist\mileycyrus.jpg" />
+    <Content Include="Content\assets\images\artist\min.jpg" />
+    <Content Include="Content\assets\images\artist\minhhang.jpg" />
+    <Content Include="Content\assets\images\artist\missa.jpg" />
+    <Content Include="Content\assets\images\artist\momoland.jpg" />
+    <Content Include="Content\assets\images\artist\mrsiro.jpg" />
+    <Content Include="Content\assets\images\artist\phuongly.jpg" />
+    <Content Include="Content\assets\images\artist\redvelvet.jpg" />
+    <Content Include="Content\assets\images\artist\rihanna.jpg" />
+    <Content Include="Content\assets\images\artist\ritaora.jpg" />
+    <Content Include="Content\assets\images\artist\selenagomez.jpg" />
+    <Content Include="Content\assets\images\artist\snsd.jpg" />
+    <Content Include="Content\assets\images\artist\sontung.jpg" />
+    <Content Include="Content\assets\images\artist\soobin.jpg" />
+    <Content Include="Content\assets\images\artist\sunmi.jpg" />
+    <Content Include="Content\assets\images\artist\superjunior.jpg" />
+    <Content Include="Content\assets\images\artist\tara.jpg" />
+    <Content Include="Content\assets\images\artist\taylorswift.jpg" />
+    <Content Include="Content\assets\images\artist\thefatrat.jpg" />
+    <Content Include="Content\assets\images\artist\twice.jpg" />
+    <Content Include="Content\assets\images\background1.jpg" />
+    <Content Include="Content\assets\images\background2.jpg" />
+    <Content Include="Content\assets\images\bgfooter.png" />
+    <Content Include="Content\assets\images\facebook.png" />
+    <Content Include="Content\assets\images\giphy.gif" />
+    <Content Include="Content\assets\images\icon.jpg" />
+    <Content Include="Content\assets\images\instagram.png" />
+    <Content Include="Content\assets\images\logo.png" />
+    <Content Include="Content\assets\images\play.png" />
+    <Content Include="Content\assets\images\poster\alone.jpg" />
+    <Content Include="Content\assets\images\poster\anhoiolai.jpg" />
+    <Content Include="Content\assets\images\poster\asifitsyourlast.jpg" />
+    <Content Include="Content\assets\images\poster\badboy.jpg" />
+    <Content Include="Content\assets\images\poster\baebae.jpg" />
+    <Content Include="Content\assets\images\poster\baogiolaychong.jpg" />
+    <Content Include="Content\assets\images\poster\bboombboom.jpg" />
+    <Content Include="Content\assets\images\poster\blankspace.jpg" />
+    <Content Include="Content\assets\images\poster\boombayah.jpg" />
+    <Content Include="Content\assets\images\poster\buayeu.jpg" />
+    <Content Include="Content\assets\images\poster\chamdainoidau.jpg" />
+    <Content Include="Content\assets\images\poster\closer.jpg" />
+    <Content Include="Content\assets\images\poster\countingstars.jpg" />
+    <Content Include="Content\assets\images\poster\dalladalla.jpg" />
+    <Content Include="Content\assets\images\poster\darkhorse.jpg" />
+    <Content Include="Content\assets\images\poster\deminoichomanghe.jpg" />
+    <Content Include="Content\assets\images\poster\despacito.jpg" />
+    <Content Include="Content\assets\images\poster\dna.jpg" />
+    <Content Include="Content\assets\images\poster\dudududu.jpg" />
+    <Content Include="Content\assets\images\poster\emgaimua.jpg" />
+    <Content Include="Content\assets\images\poster\emgioi.jpg" />
+    <Content Include="Content\assets\images\poster\emsairoianhxinloiemdi.jpg" />
+    <Content Include="Content\assets\images\poster\faded.jpg" />
+    <Content Include="Content\assets\images\poster\fxxkit.jpg" />
+    <Content Include="Content\assets\images\poster\gentleman.jpg" />
+    <Content Include="Content\assets\images\poster\goodboy.jpg" />
+    <Content Include="Content\assets\images\poster\justright.jpg" />
+    <Content Include="Content\assets\images\poster\lethergo.jpg" />
+    <Content Include="Content\assets\images\poster\likey.jpg" />
+    <Content Include="Content\assets\images\poster\lovescenario.jpg" />
+    <Content Include="Content\assets\images\poster\mattroicuaem.jpg" />
+    <Content Include="Content\assets\images\poster\monster.jpg" />
+    <Content Include="Content\assets\images\poster\muonruoutotinh.jpg" />
+    <Content Include="Content\assets\images\poster\nguoilaoi.jpg" />
+    <Content Include="Content\assets\images\poster\noinaycoanh.jpg" />
+    <Content Include="Content\assets\images\poster\roar.jpg" />
+    <Content Include="Content\assets\images\poster\sangmatchua.jpg" />
+    <Content Include="Content\assets\images\poster\shakeitoff.jpg" />
+    <Content Include="Content\assets\images\poster\shapeofyou.jpg" />
+    <Content Include="Content\assets\images\poster\shine.jpg" />
+    <Content Include="Content\assets\images\poster\sidetoside.jpg" />
+    <Content Include="Content\assets\images\poster\sorry.jpg" />
+    <Content Include="Content\assets\images\poster\sugar.jpg" />
+    <Content Include="Content\assets\images\poster\thangdien.jpg" />
+    <Content Include="Content\assets\images\poster\thangtulaloinoidoicuaem.jpg" />
+    <Content Include="Content\assets\images\poster\thisiswhatyourcamefor.jpg" />
+    <Content Include="Content\assets\images\poster\uptownfunk.jpg" />
+    <Content Include="Content\assets\images\poster\yeulathathu.jpg" />
+    <Content Include="Content\assets\images\preloader.png" />
+    <Content Include="Content\assets\images\theme1.jpg" />
+    <Content Include="Content\assets\images\theme10.jpg" />
+    <Content Include="Content\assets\images\theme11.jpg" />
+    <Content Include="Content\assets\images\theme12.jpg" />
+    <Content Include="Content\assets\images\theme13.jpg" />
+    <Content Include="Content\assets\images\theme14.jpg" />
+    <Content Include="Content\assets\images\theme15.jpg" />
+    <Content Include="Content\assets\images\theme16.jpg" />
+    <Content Include="Content\assets\images\theme2.jpg" />
+    <Content Include="Content\assets\images\theme3.jpg" />
+    <Content Include="Content\assets\images\theme4.jpg" />
+    <Content Include="Content\assets\images\theme5.jpg" />
+    <Content Include="Content\assets\images\theme6.jpg" />
+    <Content Include="Content\assets\images\theme7.jpg" />
+    <Content Include="Content\assets\images\theme8.jpg" />
+    <Content Include="Content\assets\images\theme9.jpg" />
+    <Content Include="Content\assets\images\witter.png" />
+    <Content Include="Content\scripts\script.js" />
+    <Content Include="Content\style.css">
+      <DependentUpon>style.scss</DependentUpon>
+    </Content>
+    <Content Include="Content\style.min.css">
+      <DependentUpon>style.css</DependentUpon>
+    </Content>
+    <Content Include="favicon.ico" />
+    <Content Include="Content\assets\vendor\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\assets\bootstrap\bootstrap.js" />
+    <Content Include="Content\assets\bootstrap\bootstrap.min.js" />
+    <Content Include="Content\style.scss" />
+    <None Include="compilerconfig.json" />
+    <None Include="compilerconfig.json.defaults">
+      <DependentUpon>compilerconfig.json</DependentUpon>
+    </None>
+    <None Include="Content\assets\jquery\jquery-3.3.1.intellisense.js" />
+    <Content Include="Content\assets\jquery\jquery-3.3.1.js" />
+    <Content Include="Content\assets\jquery\jquery-3.3.1.min.js" />
+    <Content Include="Content\assets\jquery\jquery-3.3.1.slim.js" />
+    <Content Include="Content\assets\jquery\jquery-3.3.1.slim.min.js" />
+    <None Include="Content\assets\jquery\jquery.validate-vsdoc.js" />
+    <Content Include="Content\assets\jquery\jquery.validate.js" />
+    <Content Include="Content\assets\jquery\jquery.validate.min.js" />
+    <Content Include="Content\assets\jquery\jquery.validate.unobtrusive.js" />
+    <Content Include="Content\assets\jquery\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Content\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Content\scss\_var.scss" />
+    <Content Include="Content\scss\_base.scss" />
+    <Content Include="Content\scss\_responsive.scss" />
+    <Content Include="Content\scss\_module.scss" />
+    <Content Include="Content\scss\module\_header.scss" />
+    <Content Include="Content\scss\module\_pagination.scss" />
+    <Content Include="Content\scss\module\_body.scss" />
+    <Content Include="Content\scss\module\_aside.scss" />
+    <Content Include="Content\scss\module\_bodyMain.scss" />
+    <Content Include="Content\scss\module\_carousel.scss" />
+    <Content Include="Content\scss\module\_footer.scss" />
+    <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\PageDetails\Index.cshtml" />
+    <Content Include="Views\PageDetails\AnhOi.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+    <Folder Include="Views\Auth\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\assets\vendor\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="Content\assets\vendor\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="Content\assets\vendor\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="Content\assets\vendor\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\assets\bootstrap\bootstrap.min.css.map" />
+    <Content Include="Content\assets\bootstrap\bootstrap.css.map" />
+    <Content Include="Content\assets\bootstrap\bootstrap-theme.min.css.map" />
+    <Content Include="Content\assets\bootstrap\bootstrap-theme.css.map" />
+    <Content Include="Content\scss\module\_bell.scss" />
+    <Content Include="Content\scss\module\_contact.scss" />
+    <None Include="packages.config" />
+    <Content Include="Content\assets\jquery\jquery-3.3.1.slim.min.map" />
+    <Content Include="Content\assets\jquery\jquery-3.3.1.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50485</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50485/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

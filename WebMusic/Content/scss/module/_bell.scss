@@ -1,0 +1,59 @@
+﻿/* ==== bell ====  */
+.bell__info {
+    position: fixed;
+    bottom: 50px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
+    z-index: 999;
+
+    & button {
+        width: 100%;
+        cursor: pointer;
+        outline: none;
+        border: none;
+        z-index: 2;
+    }
+
+    & i {
+        font-size: 20px;
+        color: #ffffff;
+    }
+}
+
+.bell__info .animate__circle,
+.bell__info button {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #db930e;
+    border-radius: 50%;
+}
+
+.bell__info .animate__circle {
+    animation: scaleCircle 1s linear infinite;
+}
+
+@keyframes scaleCircle {
+    from {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    to {
+        transform: scale(1.6);
+        opacity: 0;
+    }
+}
+
+@-webkit-keyframes scaleCircle {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.6);
+    }
+}

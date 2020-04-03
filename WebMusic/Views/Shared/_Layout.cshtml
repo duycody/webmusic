@@ -1,0 +1,205 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
+    @*@Styles.Render("~/Content/css")*@
+    @Styles.Render("~/Content/style.min.css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <!-- ==== Header ==== -->
+    <header class="header topbar">
+        <div class="container">
+            <div class="header__home">
+                <div class="header__image">
+                    <a href="/Home">
+                        <img src="~/Content/assets/images/icon.jpg" alt="" title="" />
+                    </a>
+                </div>
+                <div class="header__search">
+                    <form action="/" method="post">
+                        <div class="form__group">
+                            <input type="text" name="search" placeholder="Tìm bài hát, video, ca sĩ..." />
+                            <button>
+                                <i class="fa fa-search"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div class="header__contact">
+                    <a href="/Contact">Liên Hệ</a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- ==== carousel ==== -->
+    @RenderSection("carousel");
+    <!-- ==== aside bars ==== -->
+    <aside class="bars" id="bars">
+        <button class="bars__btn">
+            <div></div>
+            <div></div>
+            <div></div>
+        </button>
+        <div class="menu__collapse">
+            <div class="menu__header">
+                <a href="/Home">
+                    <img src="~/Content/assets/images/icon.jpg" alt="" title="" />
+                </a>
+            </div>
+            <div class="menu__home">
+                <div></div>
+                <div>
+                    <nav class="bars__navbar">
+                        <ol class="navbar__nav">
+                            <li>
+                                <a class="active" href="/">Home</a>
+                            </li>
+                            <li>
+                                <a href="/">Bài Hát</a>
+                            </li>
+                            <li>
+                                <a href="/">Video</a>
+                            </li>
+                            <li>
+                                <a href="/">Chủ Đề</a>
+                            </li>
+                            <li>
+                                <a href="/">Ca Sĩ</a>
+                            </li>
+                            <li>
+                                <a href="/">BXH</a>
+                            </li>
+                            <li>
+                                <a href="/">Album</a>
+                            </li>
+                        </ol>
+                    </nav>
+                    <div class="language">
+                        <a href="javascript:void(0)">
+                            <img src="~/Content/assets/images/vietnamese.png" />
+                            <span class="language__vn">Tiếng Việt</span>
+                        </a>
+                        <div class="cross"></div>
+                        <a href="javascript:void(0)">
+                            <img src="~/Content/assets/images/english.png" />
+                            <span class="language__en">Tiếng Anh</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <!-- ==== body ==== -->
+    <div class="body">
+        <div class="container">
+            <div class="body__home row">
+                <div class="col-lg-8">@RenderSection("bodyMain")</div>
+                <div class="col-lg-4">@RenderSection("bodyAside")</div>
+            </div>
+        </div>
+    </div>
+    <!-- ==== footer ==== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__home">
+                <div class="customer">
+                    <div class="customer__care">
+                        <h2>CHĂM SÓC KHÁCH HÀNG</h2>
+                        <div>Hotline: 0916 104 500</div>
+                        <div>Giờ làm việc: 8h00-22h00 tất cả ngày trong tuần</div>
+                        <div>Email: group@gmail.com</div>
+                    </div>
+                    <div class="customer__connect">
+                        <h2>KẾT NỐI VỚI CHÚNG TÔI</h2>
+                        <div class="connect__icon">
+                            <a href="#">
+                                <div class="connect__icon--facebook">
+                                    <img src="~/Content/assets/images/facebook.png" />
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="connect__icon--instagram">
+                                    <img src="~/Content/assets/images/instagram.png" />
+                                </div>
+                            </a>
+                            <a href="#">
+                                <div class="connect__icon--witter">
+                                    <img src="~/Content/assets/images/witter.png" />
+                                </div>
+                            </a>
+                        </div>
+                        <h2>ỨNG DỤNG</h2>
+                        <a href="#">
+                            <img src="~/Content/assets/images/app-ios.png" />
+                        </a>
+                        <a href="#">
+                            <img src="~/Content/assets/images/app-android.png" />
+                        </a>
+                    </div>
+                </div>
+                <div class="cross"></div>
+                <div class="rules">
+                    <div>
+                        <div>
+                            <a href="#">Điều khoản chung</a>
+                        </div>
+                        <div>
+                            <a href="#">Điều khoản giao dịch</a>
+                        </div>
+                        <div>
+                            <a href="#">Chính sách thanh toán</a>
+                        </div>
+                        <div>
+                            <a href="#">Chính sách bảo mật</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div>
+                            <a href="#">Câu hỏi thườn gặp</a>
+                        </div>
+                        <div>
+                            <a href="#">Hướng dẫn download</a>
+                        </div>
+                        <div>
+                            <a href="#">Liên hệ</a>
+                        </div>
+                        <div>
+                            <a href="#">Tuyển dụng</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==== bell ==== -->
+    <div class="bell__info">
+        <div class="animate__circle"></div>
+        <div class="bell__info--text"></div>
+        <button>
+            <i class="fa fa-bell"></i>
+        </button>
+    </div>
+    <!-- ================== -->
+    <!-- ================== -->
+    @Scripts.Render("~/bundles/jquery")
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    @Scripts.Render("~/Content/scripts/script.js")
+    @Scripts.Render("~/Content/scripts/tabsBXH.js")
+    @RenderSection("scripts", required: false)   <!-- ==== Khai báo a còng section + tên RenderSection để viết script cho trang con ==== -->    
+</body>
+</html>

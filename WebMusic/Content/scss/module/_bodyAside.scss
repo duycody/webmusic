@@ -1,0 +1,126 @@
+﻿/* ==== aside ==== */
+.section__topic img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+}
+
+.section__topic .topic {
+    margin: 15px 0;
+}
+
+.tab {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tab > button {
+    width: 100%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 5px 15px;
+    box-sizing: border-box;
+    transition: .3s;
+}
+
+.tab > button:hover {
+    background-color: #eb4646;
+    color: #ffffff;
+    transition: .3s;
+}
+
+.tab button:first-child {
+    border-radius: 30px 0 0 30px;
+}
+
+.tab button:last-child {
+    border-radius: 0 30px 30px 0;
+}
+
+.tab .active {
+    background-color: #eb4646;
+    color: #ffffff;
+}
+
+.bxhSong {
+    margin: 20px 0;
+}
+
+.bxhSong__top {
+    display: flex;
+    border-bottom: 1px solid #dbd2d2;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.bxhSong__img {
+    position: relative;
+    width: 100px;
+}
+
+.bxhSong__top--one {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    background-color: #eb4646;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.bxhSong img {
+    width: 100%;
+}
+
+.bxhSong__info {
+    margin-left: 10px;
+}
+
+.bxhSong__info--title a {
+    color: #000000;
+}
+
+.bxhSong__info--artist a {
+    color: #6d6c6c;
+}
+
+.bxhSong__info a:hover {
+    color: #2929c4;
+}
+
+.bxhSong__stt {
+    align-items: center;
+}
+
+.bxhSong__stt > div:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.bxhSong__top--2 {
+    color: #1abc9c;
+}
+
+.bxhSong__top--3 {
+    color: rgb(255, 136, 0);
+}
+
+.bxhSong__top--more3 {
+    color: #808080;
+}
+
+#bxhSong-auMy,
+#bxhSong-korean {
+    display: none;
+}

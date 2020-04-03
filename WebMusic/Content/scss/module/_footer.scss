@@ -1,0 +1,82 @@
+﻿footer {
+    position: relative;   
+    margin-top: 20px;
+    background-image: url("assets/images/bgfooter.png");
+    /*background-color: rgb(219, 212, 218);*/
+    background-color: $colorAqua;
+}
+
+footer .cross {
+    width: 3px;
+    height: inherit;
+    background-color: #ea3b92;
+}
+
+.footer__home {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding: 15px 0;
+
+    .customer,
+    .rules {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .customer {
+        width: 64%;
+    }
+
+    .rules {
+        width: 33%;
+    }
+}
+
+.customer__care,
+.customer__connect {
+    padding-right: 20px;
+}
+
+.customer__care > *,
+.customer__connect > * {
+    margin: 10px 0;
+}
+
+.customer__care h2,
+.customer__connect h2 {
+    color: #ea3b92;
+    font-size: 18px;
+}
+
+.customer__care > div {
+    font-size: 15px;
+    color: #000000;
+}
+
+.connect__icon {
+    display: flex;
+}
+
+.customer__connect .connect__icon img {
+    width: 40px;
+    /* height: 40px;    */
+}
+
+.rules a {
+    color: #000000;
+    font-size: 15px;
+}
+
+.rules a:hover {
+    text-decoration: underline;
+}
+
+.rules > div {
+    padding-right: 20px;
+}
+
+.rules > div > * {
+    margin: 10px 0;
+}
